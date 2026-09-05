@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.cytracon.cctv-lite",
+  "name": "CCTV Lite",
+  "version": "1.0.0",
+  "author": "Cytracon",
+  "license": "MIT",
+  "description": "Bar button and panel for CCTV Lite on Omarchy: show camera count and layout, then open the GTK viewer. CCTV Lite itself is installed separately. No camera credentials in this plugin.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "activation": "on-demand",
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "CCTV Lite",
+    "description": "Open CCTV Lite and show camera layout status",
+    "category": "System",
+    "aliases": [
+      "cctv",
+      "camera",
+      "rtsp",
+      "cytracon"
+    ],
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}
