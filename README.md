@@ -2,17 +2,23 @@
 
 **What it is.** [CCTV Lite](https://github.com/cytracon/cctv-lite) is a live multi-camera viewer for a local NVR (Hikvision-style RTSP). Watch cameras in a grid with sub/main streams. Host, password, and camera names stay on this machine.
 
-This listing is a **Quickshell bar plugin**. It does **not** ship the GTK viewer and does **not** contain camera credentials. The **CV** button shows how many cameras are configured and the current layout; right-click opens the viewer. Install the app with `omarchy install cctv-lite`.
+This plugin is the bar UI for that viewer: camera count and layout, then a launch into CCTV Lite. If the viewer is missing, the panel runs `omarchy install cctv-lite` (app + this plugin). No camera credentials in this plugin.
 
 Layout follows the official Omarchy plugin template: `manifest.json`, `BarWidget.qml`, `Panel.qml`, `Model.js`.
 
 ## Install
 
+One command installs the **viewer and this plugin**:
+
+```bash
+omarchy install cctv-lite
+```
+
+Or add the widget first, then click **Install CCTV Lite** in the panel:
+
 ```sh
 omarchy plugin add https://github.com/cytracon/omarchy-cctv-lite.git --enable
 ```
-
-The widget lands in the right bar section.
 
 ```sh
 omarchy bar move io.github.cytracon.cctv-lite --section right
@@ -20,7 +26,7 @@ omarchy bar move io.github.cytracon.cctv-lite --section right
 
 ## Usage
 
-Click **CV** to open or close the panel. Escape closes it. Right-click launches CCTV Lite. In the panel: **O** open, **S** source.
+Click **CV** to open or close the panel. Escape closes it. Right-click opens the viewer (or installs if missing). In the panel: **I** install, **O** open, **S** source.
 
 ## Remove
 
@@ -43,15 +49,15 @@ That writes `~/.local/bin/cctv-lite`. Camera host, password, and names stay in `
 ## External dependencies
 
 - Omarchy Quattro shell (Quickshell). No extra QML modules.
-- Optional: the CCTV Lite GTK app at `$HOME/.local/bin/cctv-lite`.
-- `omarchy-launch-browser` for the source link (ships with Omarchy).
+- CCTV Lite at `$HOME/.local/bin/cctv-lite` (installed by the panel or by `omarchy install cctv-lite`).
+- `omarchy-launch-floating-terminal-with-presentation` and `omarchy-launch-browser` (ship with Omarchy).
 
 ## Security
 
-- No install hooks, daemons, privilege escalation, or network clients
 - No camera host, password, or RTSP URLs in this repository
-- Left-click only toggles the panel
-- Right-click runs the fixed path `$HOME/.local/bin/cctv-lite` when that file exists
+- Left-click toggles the panel
+- Right-click runs `$HOME/.local/bin/cctv-lite`, or installs CCTV Lite if missing
+- Install runs `omarchy install cctv-lite` in a floating terminal
 - “Source” opens `https://github.com/cytracon/cctv-lite` via `omarchy-launch-browser`
 
 Omarchy plugins run unsandboxed. Review `BarWidget.qml`, `Panel.qml`, and `Model.js` before enabling.

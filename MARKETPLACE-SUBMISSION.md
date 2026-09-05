@@ -30,7 +30,7 @@ _No response_
 
 ### Maintainer notes
 
-What it is: CCTV Lite is a live NVR camera grid (Hikvision-style RTSP). This plugin only shows camera count/layout and opens the viewer. No credentials in the plugin.
+What it is: CCTV Lite is a live NVR camera grid (Hikvision-style RTSP). This plugin shows camera count/layout, opens the viewer, and installs CCTV Lite with `omarchy install cctv-lite` if it is missing. No credentials in the plugin.
 
 Plugin ID: `io.github.cytracon.cctv-lite`.
 

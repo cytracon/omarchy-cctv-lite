@@ -69,8 +69,19 @@ Panel {
   }
 
   function launchApp() {
-    if (!root.installed) return
+    if (!root.installed) {
+      installApp()
+      return
+    }
     Quickshell.execDetached([root.appBin])
+    root.close()
+  }
+
+  function installApp() {
+    Quickshell.execDetached([
+      "omarchy-launch-floating-terminal-with-presentation",
+      "omarchy", "install", "cctv-lite"
+    ])
     root.close()
   }
 
@@ -122,6 +133,7 @@ Panel {
       onTabRequested: function(direction) { root.switchPanel(direction) }
       onTextKey: function(t) {
         if (t === "o" || t === "O") root.launchApp()
+        else if (t === "i" || t === "I") root.installApp()
         else if (t === "s" || t === "S") root.openSource()
       }
 
@@ -152,10 +164,10 @@ Panel {
 
         ActionRow {
           width: parent.width
-          title: root.installed ? "Open CCTV Lite" : "CCTV Lite is not installed"
-          hint: root.installed ? "Right-click the bar icon, or press O" : "omarchy install cctv-lite"
+          title: root.installed ? "Open CCTV Lite" : "Install CCTV Lite"
+          hint: root.installed ? "Right-click the bar icon, or press O" : "Installs the GTK viewer. Press I"
           selected: root.cursorActive && root.actionIndex === 0
-          enabled: root.installed
+          enabled: true
           onClicked: root.launchApp()
         }
 
