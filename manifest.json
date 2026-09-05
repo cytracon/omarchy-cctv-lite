@@ -15,7 +15,7 @@
   },
   "barWidget": {
     "displayName": "CCTV Lite",
-    "description": "Live NVR camera grid: layout status, install if missing, open viewer"
+    "description": "Live NVR camera grid: layout status, install if missing, open viewer",
     "category": "System",
     "aliases": [
       "cctv",
