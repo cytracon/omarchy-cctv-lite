@@ -1,8 +1,8 @@
 # CCTV Lite — Omarchy plugin
 
-Omarchy Quattro bar widget for **[CCTV Lite](https://github.com/cytracon/cctv-lite)** `0.2.0`.
+**What it is.** [CCTV Lite](https://github.com/cytracon/cctv-lite) is a live multi-camera viewer for a local NVR (Hikvision-style RTSP). Watch cameras in a grid with sub/main streams. Host, password, and camera names stay on this machine.
 
-This listing is a **Quickshell bar plugin**. It does **not** ship the GTK viewer and does **not** contain camera credentials. Left-click opens a panel with camera count and layout; right-click launches CCTV Lite when `~/.local/bin/cctv-lite` is present.
+This listing is a **Quickshell bar plugin**. It does **not** ship the GTK viewer and does **not** contain camera credentials. The **CV** button shows how many cameras are configured and the current layout; right-click opens the viewer. Install the app with `omarchy install cctv-lite`.
 
 Layout follows the official Omarchy plugin template: `manifest.json`, `BarWidget.qml`, `Panel.qml`, `Model.js`.
 

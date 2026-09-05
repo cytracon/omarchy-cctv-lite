@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "author": "Cytracon",
   "license": "MIT",
-  "description": "Bar button and panel for CCTV Lite on Omarchy: show camera count and layout, then open the GTK viewer. CCTV Lite itself is installed separately. No camera credentials in this plugin.",
+  "description": "Live NVR camera grid for Omarchy (Hikvision-style RTSP). This plugin shows camera count and layout, then opens CCTV Lite. The viewer is installed separately. No camera credentials here.",
   "kinds": [
     "bar-widget"
   ],
@@ -15,7 +15,7 @@
   },
   "barWidget": {
     "displayName": "CCTV Lite",
-    "description": "Open CCTV Lite and show camera layout status",
+    "description": "Live NVR camera grid: show layout status and open the viewer",
     "category": "System",
     "aliases": [
       "cctv",

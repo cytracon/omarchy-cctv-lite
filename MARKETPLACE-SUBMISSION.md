@@ -30,6 +30,8 @@ _No response_
 
 ### Maintainer notes
 
+What it is: CCTV Lite is a live NVR camera grid (Hikvision-style RTSP). This plugin only shows camera count/layout and opens the viewer. No credentials in the plugin.
+
 Plugin ID: `io.github.cytracon.cctv-lite`.
 
 This is an Omarchy Quattro bar-widget (Quickshell) for CCTV Lite 0.2.0 on Omarchy/Arch. It does not ship the GTK viewer and does not run installers. `omarchy plugin add` only clones this repo. CCTV Lite itself is installed separately with `omarchy install cctv-lite` (user-local `~/.local`).
