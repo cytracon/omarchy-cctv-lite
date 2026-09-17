@@ -146,7 +146,7 @@ Panel {
         PanelHero {
           width: parent.width
           title: "CCTV Lite"
-          meta: root.installed ? (root.liveVersion || "0.2.2") : "Not installed in ~/.local"
+          meta: root.installed ? (root.liveVersion ? ("v" + root.liveVersion) : "installed") : "Not installed in ~/.local"
           foreground: root.foreground
           fontFamily: root.fontFamily
         }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "io.github.cytracon.cctv-lite",
   "name": "CCTV Lite",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Cytracon",
   "license": "MIT",
   "description": "Live NVR camera grid for Omarchy (Hikvision-style RTSP). Shows camera count and layout, then opens CCTV Lite. If missing, the panel installs it. No camera credentials here.",
